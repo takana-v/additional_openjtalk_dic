@@ -1,3 +1,6 @@
 [submodule "mecab-ipadic-neologd"]
 	path = mecab-ipadic-neologd
 	url = https://github.com/neologd/mecab-ipadic-neologd/
+[submodule "tdmelodic"]
+	path = tdmelodic
+	url = https://github.com/PKSHATechnology-Research/tdmelodic
