@@ -7,7 +7,7 @@ $ sudo apt-get install -y --no-install-recommends \
         build-essential \
         gcc g++ cmake \
         unzip xz-utils \
-      	libblas3 libblas-dev \
+        libblas3 libblas-dev \
         mecab libmecab-dev swig \
         locales \
         nkf \
