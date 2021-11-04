@@ -14,10 +14,13 @@ with open("neologd_all.csv", encoding="utf-8", newline="") as f:
 converter = Converter()
 prog = re.compile('(?:[アイウエオカ-モヤユヨ-ロワ-ヶ][ァィゥェォャュョヮ]|[アイウエオカ-モヤユヨ-ロワ-ヶー])')
 with open("neologd_omitted.csv", newline="", encoding="utf-8") as f:
+    for i, _ in enumerate(f):
+        pass
+    f.seek(0)
     csv_reader = csv.reader(f)
     with open("additional_openjtalk_omitted_dic.csv", mode="w",newline="", encoding="utf-8") as f2:
         csv_writer = csv.writer(f2)
-        for l in tqdm(csv_reader):
+        for l in tqdm(csv_reader, max=i+1):
             add_l = l[0:13]
             add_l.append(f"{converter.sy2a(l[0],l[12]).find('[')+1}/{len(prog.findall(l[12]))}")
             add_l.append("*")
