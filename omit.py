@@ -20,7 +20,7 @@ with open("neologd_omitted.csv", newline="", encoding="utf-8") as f:
     csv_reader = csv.reader(f)
     with open("additional_openjtalk_omitted_dic.csv", mode="w",newline="", encoding="utf-8") as f2:
         csv_writer = csv.writer(f2)
-        for l in tqdm(csv_reader, max=i+1):
+        for l in tqdm(csv_reader, total=i+1):
             add_l = l[0:13]
             add_l.append(f"{converter.sy2a(l[0],l[12]).find('[')+1}/{len(prog.findall(l[12]))}")
             add_l.append("*")
