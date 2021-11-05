@@ -40,7 +40,9 @@ Copyright 2015-2019 Toshinori Sato (@overlast)
 また、下記も参照してください。
 https://github.com/neologd/mecab-ipadic-neologd/blob/master/COPYING
 
+変更点:
 オリジナルのseed/*.csv.xzを解凍し、一つのcsvファイルにして使用しています。
+また、omittedバージョンの場合、tdmelodic-convertを用いて、一部項目の削除を行っています。
 そこにtdmelodicで推論したアクセント情報を元にアクセント型、またモーラ数とアクセント結合規則を追加しています。
 
 
