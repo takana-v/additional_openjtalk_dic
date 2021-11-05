@@ -22,7 +22,6 @@ SOFTWARE.
 
 成果物のcsvファイルはApache License Version 2.0で配布されているmecab-ipadic-neologdを改変して作られています。
 https://github.com/neologd/mecab-ipadic-neologd
-ライセンスはApache License, Version 2.0です。以下を参照してください。
 ------
 Copyright 2015-2019 Toshinori Sato (@overlast)
 
