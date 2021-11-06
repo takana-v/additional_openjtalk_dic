@@ -24,6 +24,6 @@ with open("neologd_omitted.csv", newline="", encoding="utf-8") as f:
         for l in tqdm(csv_reader, total=i+1):
             add_l = [(l[0].translate(to_zenkaku))]
             add_l += l[1:13]
-            add_l.append(f"{converter.sy2a(l[0],l[12]).find('[')+1}/{len(prog.findall(l[12]))}")
+            add_l.append(f"{max(converter.sy2a(l[0],l[12]).replace("[", "").find(']'), 0)}/{len(prog.findall(l[12]))}")
             add_l.append("*")
             csv_writer.writerow(add_l)
